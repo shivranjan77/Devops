@@ -41,7 +41,7 @@ services:
             - app-network
         
     api-gateway-server:
-        image: api-gateway-server
+        image: shivranjan77/api-gateway-server:1.0
         ports: 
             - "8888:8888"
         environment: 
