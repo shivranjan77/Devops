@@ -40,7 +40,16 @@ services:
         networks: 
             - app-network
         
-
+    api-gateway-server:
+        image: api-gateway-server
+        ports: 
+            - "8888:8888"
+        environment: 
+            EUREKA_HOST: eureka-server
+        depends_on: 
+            - eureka-server
+        networks: 
+            - app-network
 
 networks: 
     app-network:
